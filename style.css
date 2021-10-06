@@ -159,6 +159,28 @@ h1.nothead{
     background-image: url(background_img.jpg);
 }
 
+.SearchBack{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url(background_img.jpg);
+}
+
+.SearchCard{
+    border-radius: 10px;
+    margin-top: 90px;
+    margin-left: 300px;
+    background-color: #fff;
+    width:60%;
+    height: 20vh;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .LoginCard{
     background-color: #fff;
     height: 100vh;
@@ -248,5 +270,15 @@ h1.nothead{
     font-size: 20px;
     color:#ffa51d ;
     transition-timing-function: ease;
+}
+
+.labelcon{
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.long{
+    width: 400px;
 }
 
