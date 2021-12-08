@@ -1,3 +1,7 @@
+<?php 
+    require_once('connect.php'); 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,13 +24,30 @@
     <div class="hero">
         <div class="navbar">
             <img src="mountain.png" class="logo">
-            <button onclick="location.href='Register.html';" class="button">Sign Up</button>
-            <button onclick="location.href='Login.html';" style="position:absolute;transform: translateX(1150px);" class="button">Sign In</button>
+            <?php
+                if(isset($_SESSION["UID"])){
+                    if($_SESSION['UserType']==1)
+                    {
+                        echo "<a class='gotodash' href='dashboard.php'><p>Welcome, ".$_SESSION["FName"]."</p></a>";
+                        echo '<a class="out" style="position:absolute;text-decoration:none;right:100px;" href="LogoutProcess.php">Log out</a>';
+                    }
+                    else
+                    {
+                        echo "<a class='gotodash' href='dashboardStaff.php'><p>Welcome, ".$_SESSION["FName"]."</p></a>";
+                        echo '<a class="out" style="position:absolute;text-decoration:none;right:100px;" href="LogoutProcess.php">Log out</a>';
+                    }
+                    
+                }
+                else{
+                    echo '<a href="Register.php" class="button" style="text-decoration:none;">Sign Up</a>';
+                    echo '<a href="Login.php"  style="position:absolute;transform: translateX(1150px);text-decoration:none;" class="button">Sign In</a>';
+                }                        
+            ?>
         </div>
         <div class="content">
             <small>Welcome to our</small>
             <h1 class="nothead"> World class <br>travel platform </h1>
-            <button class="button" onclick="location.href='explore_more.html';">Explore more</button>
+            <a style="text-decoration:none;" class="button" href='searchHotel.php'>Explore more</a>
         </div>
         <div class="sidebar">
             <img src="menu.png" class="menu">
