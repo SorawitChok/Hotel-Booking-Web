@@ -6,5 +6,4 @@ In this projetc, we try to implement database and web application for hotel book
 
 languages used: PHP,HTML,CSS,SQL DBMS: MySQL
 
-contributors: Sirawit Chokphantavee 
-              Sorawit Chokphantavee
+contributors: Sirawit Chokphantavee, Sorawit Chokphantavee
